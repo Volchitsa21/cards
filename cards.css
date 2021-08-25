@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background-image: url("images/bg-image.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.main {
+  margin: 45% auto 5%;
+  display: flex;
+  width: 80%;
+  min-height: 400px;
+}
+section {
+  color: white;
+  font-weight: 300;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 30px 20px;
+}
+.photo span {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.photo-title {
+  display: block;
+  height: 60px;
+  font-size: 25px;
+}
+.card1 {
+  background-color: #555c66;
+}
+.card2 {
+  background-color: #858e99;
+}
+.card3 {
+  background-color: #478ac9;
+}
+.card4 {
+  background-color: #77aad9;
+}
+.photo .button {
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.photo .button::after {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  width: 20px;
+  height: 20px;
+  border-top: transparent;
+  border-left: transparent;
+  transform: rotate(-45deg);
+  top: 20px;
+  left: 13px;
+}
+@media screen and (max-width: 500px) {
+  .main {
+    flex-wrap: wrap;
+    width: 240px;
+    min-height: 300px;
+    left: calc(
+      100% / 2 - 4px
+    ); /*  ne poluchaetsya vistroit kartochki po 2 schtuki */
+    top: 30%;
+  }
+}
